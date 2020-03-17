@@ -8,9 +8,11 @@ A script to read a terraform.tfvars file and build a generic dhcpd.conf file for
 * A set of variables in tfvars identifying required data for script
   * machine cidr
   * bootstrap ip and name
-    * `bootstrap_name = "bootstrap-0"`
+    * `bootstrap_name = "bootstrap-00"`
     * `bootstrap_ip = "10.111.111.100"`
   * A mac vendor id prefix and a separate cluster id
+    * The `macprefix` is just the VMWare mac vendor string (like `00:50:56`) for the first part of the mac address
+    * The `cluster_mac_id` should be changed for each new cluster
   * nodes names (list of node names named with a `_names` suffix)
     * `master_names = ["master-0", "master-1", "master-2"]`
     * `infra_names = ["infra-0", "infra-1", "infra-2"]`
@@ -20,6 +22,7 @@ A script to read a terraform.tfvars file and build a generic dhcpd.conf file for
     * `master_ips = ["10.111.111.101", "10.111.111.102", "10.111.111.103"]`
     * `infra_ips = ["10.111.111.111", "10.111.111.112", "10.111.111.113"]`
     * `compute_ips = ["10.111.111.121", "10.111.111.122", "10.111.111.123"]`
+    * `storage_ips = ["10.111.111.131", "10.111.111.132", "10.111.111.133"]`
   * node count
     * `master_count = 3`
     * `infra_count = 3`
