@@ -23,10 +23,11 @@ A script to read a terraform.tfvars file and build a generic dhcpd.conf file for
     * `infra_ips = ["10.111.111.111", "10.111.111.112", "10.111.111.113"]`
     * `compute_ips = ["10.111.111.121", "10.111.111.122", "10.111.111.123"]`
     * `storage_ips = ["10.111.111.131", "10.111.111.132", "10.111.111.133"]`
-  * node count
+  * node count (set to 0 to disregard a node type)
     * `master_count = 3`
     * `infra_count = 3`
     * `compute_count = 3`
+    * `storage_count = 3`
   * domain_name
     * `domain_name = `
   * search_domains
