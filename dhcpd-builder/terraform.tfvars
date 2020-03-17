@@ -1,9 +1,4 @@
-
-
-
-
 // The machine_cidr where IP addresses will be assigned for cluster nodes.
-// Additionally, IPAM will assign IPs based on the network ID.
 machine_cidr = "10.111.111.0/23"
 
 
@@ -13,22 +8,19 @@ machine_cidr = "10.111.111.0/23"
 
 // Base domain from which the cluster domain is a subdomain.
 base_domain = "mydomain.com"
-
 domain_name_servers = ["10.111.111.254", "10.111.111.253"]
 search_domains = ["domain1", "domain2", "domain3"]
-
-// The number of control plane VMs to create. Default is 3.
-
-
-// The number of compute VMs to create. Default is 3.
-
-
-// The number of storage VMs to create. Default is 3.
-
 
 
 
 // NODE INFO
+
+// Mac address assigning
+
+// VMWare Mac Vendor ID
+macprefix = "00:50:56"
+// Cluster identifier - CHANGE FOR EACH CLUSTER
+cluster_mac_id = "9a:10"
 
 // Bootstrap
 bootstrap_name = "ocp4-60.mydomain.com"
